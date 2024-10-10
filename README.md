@@ -15,3 +15,6 @@ This notice will be removed when it has been properly restructured and formatted
 * Import the project into your preferred development environment, run, debug and package it!
   * [Visual Studio](https://github.com/sharpgdx/sharpgdx/wiki/Visual-Studio)
   * [Rider](https://github.com/sharpgdx/sharpgdx/wiki/Rider)
+
+### Note
+This is a conversion of the libGDX Super Jumper demo, located [here](https://github.com/libgdx/libgdx-demo-superjumper), to work with SharpGDX. All original code and assets belong to their respective owners.
