@@ -205,8 +205,6 @@ namespace SuperJumper
 			break;
 		}
 		game.batcher.end();
-
-		Debug.WriteLine(Gdx.graphics.getFramesPerSecond());
 	}
 
 	private void presentReady () {
