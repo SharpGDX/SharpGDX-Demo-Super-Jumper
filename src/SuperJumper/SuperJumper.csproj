@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="assets\data\background.png" />
+		<None Remove="assets\data\click.wav" />
+		<None Remove="assets\data\coin.wav" />
+		<None Remove="assets\data\font.fnt" />
+		<None Remove="assets\data\font.png" />
+		<None Remove="assets\data\help.png" />
+		<None Remove="assets\data\help1.png" />
+		<None Remove="assets\data\help2.png" />
+		<None Remove="assets\data\help3.png" />
+		<None Remove="assets\data\help4.png" />
+		<None Remove="assets\data\help5.png" />
+		<None Remove="assets\data\highjump.wav" />
+		<None Remove="assets\data\hit.wav" />
+		<None Remove="assets\data\items.png" />
+		<None Remove="assets\data\jump.wav" />
+		<None Remove="assets\data\music.wav" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="SharpGDX" Version="1.12.1-alpha.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="assets\data\background.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="assets\data\click.wav">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="assets\data\coin.wav">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="assets\data\font.fnt">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="assets\data\font.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="assets\data\help.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="assets\data\help1.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="assets\data\help2.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="assets\data\help3.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="assets\data\help4.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="assets\data\help5.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="assets\data\highjump.wav">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="assets\data\hit.wav">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="assets\data\items.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="assets\data\jump.wav">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="assets\data\music.wav">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+</Project>
