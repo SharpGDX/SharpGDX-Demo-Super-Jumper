@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using SharpGDX;
 using SharpGDX.Graphics;
 using SharpGDX.Graphics.G2D;
+using SharpGDX.Input;
 using SharpGDX.Mathematics;
 
 namespace SuperJumper
@@ -122,8 +123,8 @@ namespace SuperJumper
 			world.update(deltaTime, Gdx.input.getAccelerometerX());
 		} else {
 			float accel = 0;
-			if (Gdx.input.isKeyPressed(IInput.Keys.DPAD_LEFT)) accel = 5f;
-			if (Gdx.input.isKeyPressed(IInput.Keys.DPAD_RIGHT)) accel = -5f;
+			if (Gdx.input.isKeyPressed(Keys.DPAD_LEFT)) accel = 5f;
+			if (Gdx.input.isKeyPressed(Keys.DPAD_RIGHT)) accel = -5f;
 			world.update(deltaTime, accel);
 		}
 		if (world.score != lastScore) {
