@@ -53,9 +53,9 @@ namespace SuperJumper
 				Assets.playSound(Assets.clickSound);
 				Settings.soundEnabled = !Settings.soundEnabled;
 				if (Settings.soundEnabled)
-					Assets.music.play();
+					Assets.music.Play();
 				else
-					Assets.music.pause();
+					Assets.music.Pause();
 			}
 		}
 	}

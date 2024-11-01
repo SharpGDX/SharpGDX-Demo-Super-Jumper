@@ -64,7 +64,7 @@ namespace SuperJumper
 	}
 
 	public override void Hide () {
-		helpImage.dispose();
+		helpImage.Dispose();
 	}
 }
 }

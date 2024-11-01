@@ -116,10 +116,10 @@ namespace SuperJumper
 			}
 		}
 		
-		IApplication.ApplicationType appType = Gdx.app.getType();
+		ApplicationType appType = Gdx.app.getType();
 		
 		// should work also with Gdx.input.isPeripheralAvailable(Peripheral.Accelerometer)
-		if (appType == IApplication.ApplicationType.Android || appType == IApplication.ApplicationType.iOS) {
+		if (appType == ApplicationType.Android || appType == ApplicationType.iOS) {
 			world.update(deltaTime, Gdx.input.getAccelerometerX());
 		} else {
 			float accel = 0;

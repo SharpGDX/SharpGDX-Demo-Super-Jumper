@@ -79,9 +79,9 @@ namespace SuperJumper
 		font = new BitmapFont(Gdx.files.@internal("assets/data/font.fnt"), Gdx.files.@internal("assets/data/font.png"), false);
 
 			music = Gdx.audio.NewMusic(Gdx.files.@internal("assets/data/music.wav"));
-			music.setLooping(true);
+			music.SetLooping(true);
 			music.Volume = 0.5f;
-			if (Settings.soundEnabled) music.play();
+			if (Settings.soundEnabled) music.Play();
 			jumpSound = Gdx.audio.NewSound(Gdx.files.@internal("assets/data/jump.wav"));
 		highJumpSound = Gdx.audio.NewSound(Gdx.files.@internal("assets/data/highjump.wav"));
 		hitSound = Gdx.audio.NewSound(Gdx.files.@internal("assets/data/hit.wav"));
