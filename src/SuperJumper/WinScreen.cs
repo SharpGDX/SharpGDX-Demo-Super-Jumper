@@ -32,7 +32,7 @@ namespace SuperJumper
 	}
 	
 	public override void Render(float delta) {
-		if(Gdx.input.justTouched()) {
+		if(Gdx.Input.justTouched()) {
 			currentMessage++;
 			if(currentMessage == messages.Length) {
 				currentMessage--;
@@ -40,7 +40,7 @@ namespace SuperJumper
 			}
 		}
 		
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		Gdx.GL.glClear(IGL20.GL_COLOR_BUFFER_BIT);
 		cam.update();
 		game.batcher.setProjectionMatrix(cam.combined);
 		game.batcher.begin();

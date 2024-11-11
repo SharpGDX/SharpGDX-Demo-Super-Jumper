@@ -13,7 +13,7 @@ namespace SuperJumper
 		{
 			try
 			{
-				FileHandle filehandle = Gdx.files.external(file);
+				FileHandle filehandle = Gdx.Files.External(file);
 
 				String[] strings = filehandle.readString().Split("\n");
 
@@ -33,7 +33,7 @@ namespace SuperJumper
 		{
 			try
 			{
-				FileHandle filehandle = Gdx.files.external(file);
+				FileHandle filehandle = Gdx.Files.External(file);
 
 				filehandle.writeString((soundEnabled.ToString()) + "\n", false);
 				for (int i = 0; i < 5; i++)

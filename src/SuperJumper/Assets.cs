@@ -45,7 +45,7 @@ namespace SuperJumper
 	public static ISound clickSound;
 
 	public static Texture loadTexture (String file) {
-		return new Texture(Gdx.files.@internal(file));
+		return new Texture(Gdx.Files.Internal(file));
 	}
 
 	public static void load () {
@@ -76,17 +76,17 @@ namespace SuperJumper
 		brakingPlatform = new Animation(0.2f, new TextureRegion(items, 64, 160, 64, 16), new TextureRegion(items, 64, 176, 64, 16),
 			new TextureRegion(items, 64, 192, 64, 16), new TextureRegion(items, 64, 208, 64, 16));
 
-		font = new BitmapFont(Gdx.files.@internal("assets/data/font.fnt"), Gdx.files.@internal("assets/data/font.png"), false);
+		font = new BitmapFont(Gdx.Files.Internal("assets/data/font.fnt"), Gdx.Files.Internal("assets/data/font.png"), false);
 
-			music = Gdx.audio.NewMusic(Gdx.files.@internal("assets/data/music.wav"));
+			music = Gdx.Audio.NewMusic(Gdx.Files.Internal("assets/data/music.wav"));
 			music.SetLooping(true);
-			music.Volume = 0.5f;
+			music.SetVolume(0.5f);
 			if (Settings.soundEnabled) music.Play();
-			jumpSound = Gdx.audio.NewSound(Gdx.files.@internal("assets/data/jump.wav"));
-		highJumpSound = Gdx.audio.NewSound(Gdx.files.@internal("assets/data/highjump.wav"));
-		hitSound = Gdx.audio.NewSound(Gdx.files.@internal("assets/data/hit.wav"));
-		coinSound = Gdx.audio.NewSound(Gdx.files.@internal("assets/data/coin.wav"));
-		clickSound = Gdx.audio.NewSound(Gdx.files.@internal("assets/data/click.wav"));
+			jumpSound = Gdx.Audio.NewSound(Gdx.Files.Internal("assets/data/jump.wav"));
+		highJumpSound = Gdx.Audio.NewSound(Gdx.Files.Internal("assets/data/highjump.wav"));
+		hitSound = Gdx.Audio.NewSound(Gdx.Files.Internal("assets/data/hit.wav"));
+		coinSound = Gdx.Audio.NewSound(Gdx.Files.Internal("assets/data/coin.wav"));
+		clickSound = Gdx.Audio.NewSound(Gdx.Files.Internal("assets/data/click.wav"));
 	}
 
 	public static void playSound (ISound sound) {

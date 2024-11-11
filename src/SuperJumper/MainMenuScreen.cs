@@ -31,8 +31,8 @@ namespace SuperJumper
 	}
 
 	public void update () {
-		if (Gdx.input.justTouched()) {
-			guiCam.unproject(touchPoint.set(Gdx.input.getX(), Gdx.input.getY(), 0));
+		if (Gdx.Input.justTouched()) {
+			guiCam.unproject(touchPoint.set(Gdx.Input.getX(), Gdx.Input.getY(), 0));
 
 			if (playBounds.contains(touchPoint.x, touchPoint.y)) {
 				Assets.playSound(Assets.clickSound);
@@ -61,9 +61,9 @@ namespace SuperJumper
 	}
 
 	public void draw () {
-		GL20 gl = Gdx.gl;
+        IGL20 gl = Gdx.GL;
 		gl.glClearColor(1, 0, 0, 1);
-		gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		gl.glClear(IGL20.GL_COLOR_BUFFER_BIT);
 		guiCam.update();
 		game.batcher.setProjectionMatrix(guiCam.combined);
 

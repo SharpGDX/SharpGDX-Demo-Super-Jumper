@@ -100,14 +100,14 @@ namespace SuperJumper
 	}
 
 	private void updateReady () {
-		if (Gdx.input.justTouched()) {
+		if (Gdx.Input.justTouched()) {
 			state = GAME_RUNNING;
 		}
 	}
 
 	private void updateRunning (float deltaTime) {
-		if (Gdx.input.justTouched()) {
-			guiCam.unproject(touchPoint.set(Gdx.input.getX(), Gdx.input.getY(), 0));
+		if (Gdx.Input.justTouched()) {
+			guiCam.unproject(touchPoint.set(Gdx.Input.getX(), Gdx.Input.getY(), 0));
 
 			if (pauseBounds.contains(touchPoint.x, touchPoint.y)) {
 				Assets.playSound(Assets.clickSound);
@@ -116,15 +116,15 @@ namespace SuperJumper
 			}
 		}
 		
-		ApplicationType appType = Gdx.app.getType();
+		ApplicationType appType = Gdx.App.getType();
 		
-		// should work also with Gdx.input.isPeripheralAvailable(Peripheral.Accelerometer)
+		// should work also with Gdx.Input.isPeripheralAvailable(Peripheral.Accelerometer)
 		if (appType == ApplicationType.Android || appType == ApplicationType.iOS) {
-			world.update(deltaTime, Gdx.input.getAccelerometerX());
+			world.update(deltaTime, Gdx.Input.getAccelerometerX());
 		} else {
 			float accel = 0;
-			if (Gdx.input.isKeyPressed(Keys.DPAD_LEFT)) accel = 5f;
-			if (Gdx.input.isKeyPressed(Keys.DPAD_RIGHT)) accel = -5f;
+			if (Gdx.Input.isKeyPressed(Keys.DPAD_LEFT)) accel = 5f;
+			if (Gdx.Input.isKeyPressed(Keys.DPAD_RIGHT)) accel = -5f;
 			world.update(deltaTime, accel);
 		}
 		if (world.score != lastScore) {
@@ -146,8 +146,8 @@ namespace SuperJumper
 	}
 
 	private void updatePaused () {
-		if (Gdx.input.justTouched()) {
-			guiCam.unproject(touchPoint.set(Gdx.input.getX(), Gdx.input.getY(), 0));
+		if (Gdx.Input.justTouched()) {
+			guiCam.unproject(touchPoint.set(Gdx.Input.getX(), Gdx.Input.getY(), 0));
 
 			if (resumeBounds.contains(touchPoint.x, touchPoint.y)) {
 				Assets.playSound(Assets.clickSound);
@@ -164,7 +164,7 @@ namespace SuperJumper
 	}
 
 	private void updateLevelEnd () {
-		if (Gdx.input.justTouched()) {
+		if (Gdx.Input.justTouched()) {
 			world = new World(worldListener);
 			renderer = new WorldRenderer(game.batcher, world);
 			world.score = lastScore;
@@ -173,14 +173,14 @@ namespace SuperJumper
 	}
 
 	private void updateGameOver () {
-		if (Gdx.input.justTouched()) {
+		if (Gdx.Input.justTouched()) {
 			game.SetScreen(new MainMenuScreen(game));
 		}
 	}
 
 	public void draw () {
-		GL20 gl = Gdx.gl;
-		gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		IGL20 gl = Gdx.GL;
+		gl.glClear(IGL20.GL_COLOR_BUFFER_BIT);
 
 		renderer.render();
 
